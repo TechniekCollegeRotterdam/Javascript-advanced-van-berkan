@@ -15,7 +15,7 @@ Array methods zijn ingebouwde functies die je kunt gebruiken om arrays te bewerk
 const getallen = [1, 2, 3, 4, 5, 6];
 const evenGetallen = getallen.filter(getal => getal % 2 === 0);
 console.log(evenGetallen); // [2, 4, 6]
-```
+``` 
 
 **Wat betekent `%` (modulo)?**
 Het `%` teken is de "modulo" operator. Het geeft de **rest** terug van een deling.
