@@ -13,6 +13,7 @@ console.log('Steden:', steden);
 // Tip: gebruik map() met index parameter: (naam, index) => 
 const beschrijvingen = namen.map((naam, index) => 
     `${naam} (${leeftijden[index]} jaar) woont in ${steden[index]}.`
+`${naam} (${leeftijden} woont in ${steden[index]}.)`
 );
 
 

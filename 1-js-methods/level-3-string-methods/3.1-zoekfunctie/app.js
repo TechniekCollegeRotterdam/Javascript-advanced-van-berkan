@@ -5,8 +5,9 @@ const films = ['The Matrix', 'avatar', 'INCEPTION', 'Titanic'];
 console.log('Alle films:', films);
 
 function zoekFilms(films, zoekterm) {
-    // TODO: Return films die de zoekterm bevatten
-    return /* jouw code hier */;
+
+    return const resultaat = films.filter(film=> film.toLowerCase().includes('a'));
+    console.log(resultaat);
 }
 
 // Test de functie
