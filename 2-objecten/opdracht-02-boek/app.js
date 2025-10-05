@@ -14,3 +14,26 @@
 // In de theorie staat uitgelegd hoe je dit moet doen.
 
 // Let op: in de code conventions staat dat je de code in het Engels moet schrijven!
+
+const boek = {
+    Titel: 'Coding with Jason',
+    Auteur: 'Jason',
+    Uitgeverij: 'Mevrouw el Omari',
+    Jaar: '2025',
+    Verkocht: '100',
+    Prijs: '$11'
+
+}
+
+let output = document.querySelector('.output');
+
+output.innerHTML = `
+    <h1>Titel: ${boek.Titel}</h1>
+    <p>Auteur: ${boek.Auter}<p>
+    <p>Uitgeverij: ${boek.Uitgeverij}</p>
+    <p>Jaar: ${boek.Jaar}</p>
+    <p>Verkocht: ${boek.Verkocht}</p>
+    <p>Prijs: ${boek.Prijs}</p>
+    `
+    
+

@@ -7,3 +7,16 @@
 // Roep de functie op (het klopt dat je nog niets ziet)
 // Loop met een for/of loop door de array en toon alle items in de array in je console
 
+const Marvels = ['spiderman', 'captainAmerica', 'thor', 'lukasz'];
+
+let addMarvels = () => {
+    Marvels.push('berkan')
+}
+
+console.log('film')
+
+for (let Marvel of Marvels) {
+    console.log(Marvels);
+}
+
+// ik heb mijn best gedaan jason ik snapte het ook niet zo goed (vooral for/of loop)

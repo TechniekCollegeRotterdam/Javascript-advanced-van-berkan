@@ -23,3 +23,39 @@
 // Toon de wijzigingen op het scherm.
 
 // Gebruik geen arrow function in een object!
+
+const person = {
+    Naam: 'Lukasz',
+    Leeftijd: 18,
+    Geboortedatum: '1-10-2007',
+    Geslacht: 'Man',
+    InLeven: 'Levend',
+    Hobbys: ["gymmen ", "lezen ", "kleding-kopen ", "gamen "],
+
+    naamWijzigen: function() {
+        this.Naam = 'Berkan'
+        return this.Naam;
+    },
+    levendStatus: function() {
+        this.InLeven = 'Dood'
+        return this.InLeven;
+    },
+    addHobby: function() {
+        return this.Hobbys.push( 'coderen') 
+    }
+
+}
+
+person.naamWijzigen('Berkan')
+person.levendStatus('Dood')
+person.addHobby('coderen')
+
+let output = document.querySelector(".output")
+
+output.innerHTML = `
+    <h1>Naam: ${person.Naam}</h1>
+    <p>Leeftijd: ${person.Leeftijd}</p>
+    <p>Geboortedatum: ${person.Geboortedatum}</p>
+    <p>In Leven: ${person.InLeven}</p>
+    <p>Hobby's: ${person.Hobbys}</p>
+`

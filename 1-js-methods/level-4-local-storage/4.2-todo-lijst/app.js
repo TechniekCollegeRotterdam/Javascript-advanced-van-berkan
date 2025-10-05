@@ -5,7 +5,7 @@ let taken = []; // Array van strings (geen objecten!)
 
 function voegTaakToe() {
     const input = document.getElementById('nieuwe-taak');
-    const taakTekst = /* jouw code hier - haal waarde op en trim */;
+    const taakTekst = input.value.trim();
     
     if (taakTekst === '') {
         alert('Voer een taak in!');
@@ -13,11 +13,10 @@ function voegTaakToe() {
     }
     
     // TODO: Voeg taak toe aan array (gewoon de string)
-    taken.push(/* jouw code hier */);
+    taken.push(taakTekst);
     
     // TODO: Sla taken op in localStorage
-    /* jouw code hier - gebruik JSON.stringify */;
-    
+    localStorage.setItem(.JSON.stringify(taken));
     // Maak input leeg en update UI
     input.value = '';
     toonTaken();
@@ -25,7 +24,7 @@ function voegTaakToe() {
 
 function laadTaken() {
     // TODO: Haal taken op uit localStorage
-    const opgeslagenTaken = /* jouw code hier */;
+    const opgeslagenTaken = localStorage.setItem(.JSON.stringify(taken));
     
     if (opgeslagenTaken) {
         // TODO: Parse JSON naar array
@@ -61,7 +60,7 @@ function verwijderTaak(index) {
     
     // TODO: Sla taken op en update UI
     /* jouw code hier */;
-    toonTaken();
+    toonTaken();    
 }
 
 function wisAlleTaken() {
