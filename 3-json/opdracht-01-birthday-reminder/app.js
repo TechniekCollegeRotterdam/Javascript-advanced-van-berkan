@@ -1,34 +1,16 @@
-const container = document.getElementById('birthday-container');
-const clearBtn = document.getElementById('clear-btn');
-
+let output = document.querySelector('.birthday')
 let out = '';
 
-fetch('birthday.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Bestand niet gevonden');
+fetch('./birthday.json')
+    .then((response) => response.json())
+    .then((birthdays) => {
+     for (let birthday of birthdays) {
+        out += `
+          <h1>${birthday.Naam}</h1>
+          <h2>${birthday.Leeftijd}</h1>
+          `;
     }
-    return response.json();
-  })
-  .then(data => {
-    for (let birthday of data) {
-      out += `
-        <div>
-          <img src="${birthday.Afbeelding}" alt="${birthday.Naam}">
-          <div>
-            <h2>${birthday.Naam}</h2>
-            <p>Leeftijd: ${birthday.Leeftijd}</p>
-          </div>
-        </div>
-      `;
-    }
-    container.innerHTML = out;
-  })
-  .catch(error => {
-    console.log('Er ging iets mis:', error);
-    container.innerHTML = '<p>Data kon niet geladen worden.</p>';
-  });
 
-clearBtn.addEventListener('click', () => {
-  container.innerHTML = '';
+output.innerHTML = out;
 });
+
